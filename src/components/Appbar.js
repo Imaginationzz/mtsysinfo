@@ -12,6 +12,7 @@ import { Button, Container } from "@material-ui/core";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { AccountCircleOutlined } from "@material-ui/icons";
 import mtsyslogo from "../images/mtsysLogo.png";
+import mtsyslogo2 from "../images/mtsyslogo2.jpeg";
 
 import { Link, useHistory } from "react-router-dom";
 
@@ -112,7 +113,7 @@ export default function Appbar() {
                     >
                         <img
                             alt="logo"
-                            src={mtsyslogo}
+                            src={mtsyslogo2}
                             style={{
                                 width: 36,
                                 marginRight: 20,

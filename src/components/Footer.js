@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import mtsyslogowb from "../images/mtsyslogowb.png";
+import mtsyslogo2 from "../images/mtsyslogo2.jpeg";
 
 const useStyles = makeStyles({
     outerContainer: {
@@ -32,7 +33,7 @@ export default function Footer() {
                 <Grid container>
                     <Grid item xs={12} md={4}>
                         <div style={{ display: "flex", alignItems: "center" }}>
-                            <img src={mtsyslogowb} style={{ width: 100 }} />
+                            <img src={mtsyslogo2} style={{ width: 100 }} />
                             <Typography
                                 variant="h6"
                                 style={{ fontWeight: "bold", marginLeft: "1em" }}
