@@ -18,6 +18,26 @@ import data from "../data/db"
 const useStyles = makeStyles({
     title: {
         fontFamily: "Lobster"
+    },
+    listitem: {
+        color: "#022F41",
+        backgroundColor: "#fefefe",
+        boxShadow: "5px 5px #888888",
+        borderRadius: 10,
+        height: "400px",
+        fontSize: "36px",
+        border: "1px solid black"
+
+    },
+    listitemtext: {
+        padding: "5px",
+        fontWeight: "bold"
+    },
+
+    primarytext: {
+        color: "red",
+        fontWeight: "bold",
+        padding: "5px",
     }
 })
 
@@ -57,29 +77,25 @@ function Stepdetail(props) {
             {newStep && (
                 <Box style={{ paddingTop: 100 }}>
                     <Grid container spacing={3}>
-                        <Grid item xs={12} md={4}><img src={newStep.image}></img></Grid>
-                        <Grid item xs={12} md={4}></Grid>
-                        <Grid item xs={12} md={4}>
+                        <Grid item sm={12} xs={12} md={4}><img style={{ width: "600px" }} src={newStep.image}></img></Grid>
+                        <Grid item sm={12} xs={12} md={4}></Grid>
+                        <Grid item sm={12} xs={12} md={4}>
                             <Typography variant="h4" className={classes.title}>{newStep.title}</Typography>
                             <List>
                                 <ListItem>
                                     <ListItemText
-                                        primary=" General"
-                                        secondary={newStep.details}
-                                        style={{
-                                            color: "#022F41",
-                                            backgroundColor: "#fefefe",
-                                            boxShadow: "5px 5px #888888",
-                                            borderRadius: 10
-                                        }}
-                                    />
+                                        className={classes.listitem}
+                                        primary={<Typography className={classes.primarytext}>General </Typography>}
+                                        secondary={<Typography className={classes.listitemtext} type="body2" >{newStep.details}</Typography>}
+
+                                    ></ListItemText>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemText primary="section" secondary={newStep.title} />
+                                    <ListItemText primary={<Typography className={classes.primarytext}>Section </Typography>} secondary={newStep.title} />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemText
-                                        primary="details "
+                                        primary={<Typography className={classes.primarytext}>Details </Typography>}
                                         secondary={newStep.category}
                                     />
                                 </ListItem>
